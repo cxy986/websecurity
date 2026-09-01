@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>地球online</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <div class="login-box">
+
+        <h1>
+            人类登录
+        </h1>
+
+
+        <form method="POST">
+
+            <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="请输入昵称"
+                required
+            >
+
+            <br>
+
+
+            <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="请输入不安全的密码"
+                required
+            >
+
+            <br>
+
+
+            <button type="submit">
+                登录
+            </button>
+
+        </form>
+
+
+        {% if message %}
+
+            <p>
+                {{ message }}
+            </p>
+
+        {% endif %}
+
+
+        <p>
+            以前不是人类？
+            <a href="{{ url_for('register') }}">
+    立即成为人类
+</a>
+            </a>
+        </p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员后台</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+
+        .admin-box {
+
+            width: 600px;
+            margin: 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+
+        }
+
+
+        h1 {
+            color: #d63031;
+            text-align: center;
+        }
+
+
+        .info {
+
+            margin-top: 30px;
+            padding: 20px;
+            background: #ffeaa7;
+            border-radius: 8px;
+
+        }
+
+
+        a {
+
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: blue;
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="admin-box">
+
+
+<h1>
+    管理员后台
+</h1>
+
+
+<div class="info">
+
+<p>
+    欢迎管理员：
+    {{ username }}
+</p>
+
+
+<p>
+    当前权限：
+    {{ role }}
+</p>
+
+
+</div>
+
+
+<h3>
+    功能区域
+</h3>
+
+
+<ul>
+
+<li>
+    查看用户
+</li>
+
+<li>
+    管理留言
+</li>
+
+<li>
+    查看系统状态
+</li>
+
+
+</ul>
+
+
+
+<a href="{{ url_for('message') }}">
+返回留言板
+</a>
+
+
+<br>
+
+
+<a href="{{ url_for('logout') }}">
+退出登录
+</a>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

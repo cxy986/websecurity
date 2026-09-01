@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>留言板</title>
+
+</head>
+
+
+<body>
+
+
+<h1>留言板</h1>
+
+
+<form method="post">
+
+<input 
+name="content"
+placeholder="输入留言">
+
+
+<button>
+发送
+</button>
+
+</form>
+
+
+<hr>
+
+
+{% for msg in messages %}
+
+<p>
+{{msg[1]}} :
+{{msg[2]}}
+
+<a href="/delete/{{msg[0]}}">
+    删除
+</a>
+</p>
+
+{% endfor %}
+
+
+</body>
+
+</html>
