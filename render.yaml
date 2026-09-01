@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: websecurity
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python init_db.py
+    startCommand: python init_db.py && gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /var/data/users.db
+    disk:
+      name: websecurity-data
+      mountPath: /var/data
+      sizeGB: 1

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>个人中心</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>个人中心</h1>
+
+    <h2>欢迎，{{ username }}！</h2>
+
+    <p>身份： {{ role }}
+
+    <p>你已经成功登录。</p>
+
+    <p>
+        <a href="{{ url_for('logout') }}">退出登录</a>
+
+
+        <br>
+
+<a href="/message">
+进入留言板
+</a>
+    </p>
+
+
+
+
+</div>
+
+</body>
+
+</html>

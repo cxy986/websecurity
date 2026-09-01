@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.py[cod]
+users.db
+.env
+.idea/
+.vscode/

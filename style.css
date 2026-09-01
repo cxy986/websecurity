@@ -1,0 +1,80 @@
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#3498db;
+
+    font-family:Arial;
+    
+
+    background-image:url("/static/image/cs.webp");
+
+}
+
+
+
+
+.login-box{
+
+    background:white;
+
+    width:300px;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+}
+
+
+
+input{
+
+    width:90%;
+
+    padding:10px;
+
+    margin:10px;
+
+}
+
+
+
+button{
+
+    width:95%;
+
+    padding:10px;
+
+    background:#2980b9;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+
+
+button:hover{
+
+    background:#1f618d;
+
+}
+
+
+#message{
+
+    color:red;
+
+}

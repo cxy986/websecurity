@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>旅行者注册</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>旅行者注册</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="username"
+            placeholder="请输入昵称"
+            required
+        >
+
+        <br>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="请输入密码"
+            required
+        >
+
+        <br>
+
+        <input
+            type="password"
+            name="confirm_password"
+            placeholder="请确认密码"
+            required
+        >
+
+        <br>
+
+        <button type="submit">
+            注册
+        </button>
+
+    </form>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <p>
+        已经有账号？
+        <a href="/">返回登录</a>
+    </p>
+
+</div>
+
+</body>
+
+</html>
